@@ -1,0 +1,24 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Firecrawl outputs
+.firecrawl/
+research/.firecrawl/
+
+# Skill tooling dropped into project folder (kept locally, not part of the website repo)
+Website Builder/
+Website-Intelligence/
+seo optimization/
+seo-strategy/
+
+# Asset workspace (originals + intermediate conversions — final web-ready copies live in site/images/)
+assets/photos/
+assets/photos-web/
+
+# Node / Vercel
+node_modules/
+.env
+.env.local
+.vercel
