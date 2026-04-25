@@ -1,5 +1,5 @@
 /* Midtown Marketplace — interactions
-   Today's-hours highlight + GSAP scroll reveals + sticky header */
+   Today's-hours highlight + GSAP scroll reveals + collage stagger */
 
 (function () {
   'use strict';
@@ -19,16 +19,22 @@
     return h * 60 + m;
   }
 
+  function formatLabel(hhmm) {
+    const [h, m] = hhmm.split(':').map(Number);
+    const period = h >= 12 ? 'PM' : 'AM';
+    const h12 = h % 12 === 0 ? 12 : h % 12;
+    const mm = String(m).padStart(2, '0');
+    return mm === '00' ? `${h12} ${period}` : `${h12}:${mm} ${period}`;
+  }
+
   function updateTodayHighlight() {
     const now = new Date();
     const day = now.getDay();
     const today = HOURS[day];
 
-    // Highlight today's row in the hours table
     const row = document.querySelector(`#hoursTable tr[data-day="${day}"]`);
     if (row) row.classList.add('is-today');
 
-    // Hero "Today" badge
     const badge = document.getElementById('todayHours');
     if (!badge) return;
 
@@ -52,14 +58,6 @@
       badge.textContent = 'Closed for today';
       badge.dataset.state = 'closed';
     }
-  }
-
-  function formatLabel(hhmm) {
-    const [h, m] = hhmm.split(':').map(Number);
-    const period = h >= 12 ? 'PM' : 'AM';
-    const h12 = h % 12 === 0 ? 12 : h % 12;
-    const mm = String(m).padStart(2, '0');
-    return mm === '00' ? `${h12} ${period}` : `${h12}:${mm} ${period}`;
   }
 
   function setupHeaderScroll() {
@@ -113,21 +111,56 @@
       });
     }
 
-    // Hero text — staggered in immediately
+    // Hero text — staggered in immediately on load
     gsap.to('.hero [data-reveal]', {
-      opacity: 1,
-      y: 0,
+      opacity: 1, y: 0,
       duration: 0.9,
       ease: 'power3.out',
-      stagger: 0.12,
-      delay: 0.2
+      stagger: 0.1,
+      delay: 0.15
     });
 
-    // All other reveals
-    document.querySelectorAll('section:not(.hero) [data-reveal]').forEach((el) => {
+    // Collage tiles — batch reveal with stagger as the section enters
+    const collageTiles = document.querySelectorAll('.collage [data-reveal]');
+    if (collageTiles.length) {
+      ScrollTrigger.batch(collageTiles, {
+        interval: 0.06,
+        start: 'top 92%',
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, y: 0,
+          duration: 0.7,
+          ease: 'power2.out',
+          stagger: { each: 0.05, from: 'random' },
+          overwrite: true
+        })
+      });
+    }
+
+    // Intro bleed photo — gentle scale-in as it enters
+    const intoBleed = document.querySelector('.intro__bleed');
+    if (intoBleed) {
+      gsap.fromTo(intoBleed.querySelector('img'),
+        { scale: 1.08 },
+        {
+          scale: 1,
+          duration: 1.6,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: intoBleed,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    }
+
+    // All other reveals — standard fade-up on scroll
+    const everywhereElse = document.querySelectorAll(
+      'section:not(.hero):not(.collage) [data-reveal]'
+    );
+    everywhereElse.forEach((el) => {
       gsap.to(el, {
-        opacity: 1,
-        y: 0,
+        opacity: 1, y: 0,
         duration: 0.8,
         ease: 'power3.out',
         scrollTrigger: {
@@ -139,7 +172,6 @@
     });
   }
 
-  // Boot
   document.addEventListener('DOMContentLoaded', () => {
     updateTodayHighlight();
     setupHeaderScroll();

@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Midtown Marketplace — 24,000 sq ft of Antiques, Collectibles & Vintage in Hot Springs, AR</title>
-  <meta name="description" content="Midtown Marketplace is a 24,000 sq ft indoor flea market in Hot Springs, Arkansas. Antiques, collectibles, WW1 & WW2 memorabilia, mid-century, furniture, and coins. Open 6 days a week at 800 Hobson Ave.">
+  <meta name="description" content="Two floors. 24,000 sq ft. Antiques, collectibles, WW1 & WW2 memorabilia, mid-century, furniture, and coins on Hobson Ave in Hot Springs, Arkansas. If you can't find it here, you probably don't want it.">
   <meta name="theme-color" content="#3FA9C5">
 
   <!-- Open Graph -->
   <meta property="og:type" content="business.business">
   <meta property="og:title" content="Midtown Marketplace — Hot Springs, AR">
-  <meta property="og:description" content="24,000 sq ft of antiques, collectibles, WW1 & WW2 memorabilia, mid-century, furniture, and coins. 800 Hobson Ave, Hot Springs, AR.">
+  <meta property="og:description" content="Two floors. 24,000 sq ft. Antiques, vintage, military memorabilia, coins, and a hundred more reasons to walk in. 800 Hobson Ave.">
   <meta property="og:image" content="/images/storefront.jpg">
   <meta property="og:url" content="https://midtownmarketplacehs.com/">
   <meta property="og:locale" content="en_US">
@@ -19,13 +19,13 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Midtown Marketplace — Hot Springs, AR">
-  <meta name="twitter:description" content="24,000 sq ft indoor flea market on Hobson Ave.">
+  <meta name="twitter:description" content="If you can't find it here, you probably don't want it.">
   <meta name="twitter:image" content="/images/storefront.jpg">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://midtownmarketplacehs.com/">
 
-  <!-- Favicon (placeholder — replace with real favicon when logo arrives) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%233FA9C5'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' font-style='italic' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 
   <!-- Fonts -->
@@ -35,19 +35,25 @@
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- LocalBusiness Schema for Google Business Profile + AI search -->
+  <!-- LocalBusiness Schema with AggregateRating + Award -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://midtownmarketplacehs.com/#business",
     "name": "Midtown Marketplace",
-    "alternateName": "Midtown MarketPlace Hot Springs",
-    "description": "24,000 square foot indoor flea market and antique mall in Hot Springs, Arkansas. Specializing in antiques, collectibles, WW1 and WW2 military memorabilia, mid-century modern, vintage furniture, and rare coins.",
+    "alternateName": ["Midtown MarketPlace Hot Springs", "Midtown marketplace"],
+    "description": "24,000 square foot indoor flea market and antique mall on two floors in Hot Springs, Arkansas. Specializing in antiques, collectibles, WW1 and WW2 military memorabilia, mid-century modern, vintage furniture, and rare coins.",
+    "slogan": "If you can't find it here... you probably don't want it.",
     "url": "https://midtownmarketplacehs.com/",
-    "image": "https://midtownmarketplacehs.com/images/storefront.jpg",
+    "image": [
+      "https://midtownmarketplacehs.com/images/storefront.jpg",
+      "https://midtownmarketplacehs.com/images/hero-interior.jpg"
+    ],
     "telephone": "+1-501-655-9377",
     "priceRange": "$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "800 Hobson Ave",
@@ -58,8 +64,8 @@
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 34.4869,
-      "longitude": -93.0876
+      "latitude": 34.4983099,
+      "longitude": -93.0678412
     },
     "openingHoursSpecification": [
       {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "17:00"},
@@ -67,18 +73,26 @@
       {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:30", "closes": "18:00"}
     ],
     "sameAs": [
-      "https://www.facebook.com/p/Midtown-MarketPlace-Hot-Springs-Arkansas-61573039200847/"
+      "https://www.facebook.com/p/Midtown-MarketPlace-Hot-Springs-Arkansas-61573039200847/",
+      "https://maps.app.goo.gl/C1WuQxaosrs2DuF1A"
     ],
     "knowsAbout": [
-      "Antiques", "Collectibles", "WW1 Memorabilia", "WW2 Memorabilia",
-      "Military Memorabilia", "Mid-Century Modern Furniture", "Vintage Furniture", "Rare Coins"
-    ]
+      "Antiques","Collectibles","WW1 Memorabilia","WW2 Memorabilia",
+      "Military Memorabilia","Mid-Century Modern Furniture","Vintage Furniture",
+      "Rare Coins","Vintage Comics","Trading Cards","Designer Handbags"
+    ],
+    "award": "Good Neighbor Business of the Month — March 2026",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "ratingCount": "1"
+    }
   }
   </script>
 </head>
 <body>
 
-  <!-- Skip link for a11y -->
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" id="header">
@@ -101,12 +115,13 @@
         <div class="hero__veil" aria-hidden="true"></div>
       </div>
       <div class="hero__content">
-        <p class="hero__eyebrow">Hot Springs, Arkansas</p>
+        <p class="hero__eyebrow">Hot Springs · Arkansas · est. on Hobson Ave</p>
         <h1 class="hero__title">
-          <span class="hero__title-line" data-reveal>24,000 square feet</span>
-          <span class="hero__title-line" data-reveal>of Arkansas finds.</span>
+          <span class="hero__title-line" data-reveal>Two floors.</span>
+          <span class="hero__title-line" data-reveal>Twenty-four thousand</span>
+          <span class="hero__title-line" data-reveal>square feet.</span>
         </h1>
-        <p class="hero__sub" data-reveal>Antiques · Collectibles · WW1 &amp; WW2 Memorabilia · Mid-Century · Furniture · Coins</p>
+        <p class="hero__sub" data-reveal><em>"If you can't find it here&hellip; you probably don't want it."</em></p>
         <div class="hero__meta" data-reveal>
           <div class="hero__meta-item">
             <span class="hero__meta-label">Today</span>
@@ -116,98 +131,145 @@
             <span class="hero__meta-label">Address</span>
             <span class="hero__meta-value">800 Hobson Ave</span>
           </div>
+          <div class="hero__meta-item hero__meta-item--rating">
+            <span class="hero__meta-label">Google</span>
+            <span class="hero__meta-value">★★★★★ 5.0</span>
+          </div>
+        </div>
+      </div>
+      <a href="#intro" class="hero__scroll" aria-label="Scroll to learn more">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust" aria-label="Recognition and proof">
+      <div class="container trust__grid">
+        <div class="trust__item" data-reveal>
+          <div class="trust__icon" aria-hidden="true">★</div>
+          <div class="trust__body">
+            <p class="trust__head">5.0 on Google</p>
+            <p class="trust__desc">Loved by locals and travelers. <a href="https://maps.app.goo.gl/C1WuQxaosrs2DuF1A" target="_blank" rel="noopener">See reviews →</a></p>
+          </div>
+        </div>
+        <div class="trust__item" data-reveal>
+          <div class="trust__icon" aria-hidden="true">⌂</div>
+          <div class="trust__body">
+            <p class="trust__head">Good Neighbor Business of the Month</p>
+            <p class="trust__desc">Awarded March 2026 — Hot Springs Chamber of Commerce.</p>
+          </div>
+        </div>
+        <div class="trust__item" data-reveal>
+          <div class="trust__icon" aria-hidden="true">⛶</div>
+          <div class="trust__body">
+            <p class="trust__head">Two floors · 24,000 sq ft</p>
+            <p class="trust__desc">Indoor and air-conditioned. 12,000 sq ft upstairs alone.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- INTRO -->
-    <section class="intro" aria-label="About">
-      <div class="container">
+    <section class="intro" id="intro" aria-label="About">
+      <div class="container intro__container">
         <p class="intro__lead" data-reveal>
-          A big ole flea market on Hobson Ave —
-          <em>indoors, air-conditioned, six days a week.</em>
+          A big indoor flea market on Hobson Ave —
+          <em>two floors of antiques, vintage, and the unexpected.</em>
           Hundreds of booths from local vendors. New finds every week.
         </p>
+        <div class="intro__bleed" data-reveal>
+          <img src="images/hero-interior.jpg" alt="Interior view of Midtown Marketplace showing antique grandfather clocks, displays, and dark-wood cabinets" loading="lazy">
+        </div>
       </div>
     </section>
 
     <!-- CATEGORIES -->
     <section class="categories" aria-labelledby="categories-heading">
       <div class="container">
+        <p class="section-kicker" data-reveal>Six specialties under one roof</p>
         <h2 id="categories-heading" class="section-title" data-reveal>What you'll find</h2>
-        <p class="section-kicker" data-reveal>Six specialties under one roof.</p>
 
         <ul class="cat-grid" role="list">
-          <li class="cat-tile cat-tile--photo" style="--bg: url('images/booth-vintage.jpg')" data-reveal>
+          <li class="cat-tile cat-tile--photo" style="--bg: url('images/cat-antiques.jpg')" data-reveal>
             <span class="cat-tile__num">01</span>
             <h3 class="cat-tile__name">Antiques</h3>
-            <p class="cat-tile__hint">Hat racks, glassware, signs, the unexpected.</p>
+            <p class="cat-tile__hint">Grandfather clocks, leather horses, model ships, the rare and the wild.</p>
           </li>
-          <li class="cat-tile cat-tile--placeholder cat-tile--terracotta" data-reveal>
+          <li class="cat-tile cat-tile--photo" style="--bg: url('images/cat-collectibles.jpg')" data-reveal>
             <span class="cat-tile__num">02</span>
             <h3 class="cat-tile__name">Collectibles</h3>
-            <p class="cat-tile__hint">Coins to comics. The hunt is the fun.</p>
+            <p class="cat-tile__hint">Pokémon, Magic, comics, vinyl, action figures. The hunt is the fun.</p>
           </li>
-          <li class="cat-tile cat-tile--photo cat-tile--feature" style="--bg: url('images/booth-military.jpg')" data-reveal>
+          <li class="cat-tile cat-tile--photo cat-tile--feature" style="--bg: url('images/cat-military.jpg')" data-reveal>
             <span class="cat-tile__num">03</span>
             <h3 class="cat-tile__name">WW1 &amp; WW2 Memorabilia</h3>
-            <p class="cat-tile__hint">A specialty corner. Genuine pieces, regularly rotated.</p>
+            <p class="cat-tile__hint">A specialty corner. Genuine medals, uniforms, and field gear — regularly rotated. We buy, too.</p>
           </li>
-          <li class="cat-tile cat-tile--placeholder cat-tile--teal" data-reveal>
+          <li class="cat-tile cat-tile--photo" style="--bg: url('images/cat-midcentury.jpg')" data-reveal>
             <span class="cat-tile__num">04</span>
             <h3 class="cat-tile__name">Mid-Century</h3>
-            <p class="cat-tile__hint">Lamps, lounge chairs, the warm-wood era.</p>
+            <p class="cat-tile__hint">Lamps, lounge chairs, the warm-wood era. Curated rooms, not a pile.</p>
           </li>
-          <li class="cat-tile cat-tile--placeholder cat-tile--cream" data-reveal>
+          <li class="cat-tile cat-tile--photo" style="--bg: url('images/cat-furniture.jpg')" data-reveal>
             <span class="cat-tile__num">05</span>
             <h3 class="cat-tile__name">Furniture</h3>
-            <p class="cat-tile__hint">From farmhouse to formal. Real wood, real prices.</p>
+            <p class="cat-tile__hint">From farmhouse to formal. Real wood, real prices, real character.</p>
           </li>
-          <li class="cat-tile cat-tile--placeholder cat-tile--charcoal" data-reveal>
+          <li class="cat-tile cat-tile--photo" style="--bg: url('images/cat-coins.jpg')" data-reveal>
             <span class="cat-tile__num">06</span>
             <h3 class="cat-tile__name">Coins</h3>
-            <p class="cat-tile__hint">Currency, tokens, and rarities for the serious collector.</p>
+            <p class="cat-tile__hint">Pennies, nickels, dimes, mint sets. A serious case for the serious collector.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section class="gallery" aria-labelledby="gallery-heading">
+    <!-- COLLAGE GALLERY -->
+    <section class="collage" aria-labelledby="collage-heading">
       <div class="container">
-        <h2 id="gallery-heading" class="section-title" data-reveal>Inside the marketplace</h2>
-        <p class="section-kicker" data-reveal>Photos from the floor.</p>
+        <p class="section-kicker" data-reveal>Inside the marketplace</p>
+        <h2 id="collage-heading" class="section-title" data-reveal>A walk through the aisles.</h2>
+        <p class="collage__intro" data-reveal>
+          Twenty-four thousand square feet doesn't fit in a paragraph. Take a look around.
+        </p>
+      </div>
 
-        <div class="gal-grid">
-          <figure class="gal-item gal-item--tall" data-reveal>
-            <img src="images/booth-vintage.jpg" alt="Red cowboy hat resting on a dark wooden cabinet at booth 16" loading="lazy">
-          </figure>
-          <figure class="gal-item gal-item--wide" data-reveal>
-            <img src="images/booth-military.jpg" alt="Japanese sword and World War II commemorative flag with rising sun" loading="lazy">
-          </figure>
-          <figure class="gal-item" data-reveal>
-            <img src="images/booth-detail.jpg" alt="Track-mounted spotlight illuminating a ceramic pig and dried-flower arrangement" loading="lazy">
-          </figure>
-          <!-- Placeholder tiles for forthcoming photos -->
-          <figure class="gal-item gal-item--placeholder gal-item--teal" data-reveal aria-hidden="true">
-            <span>more soon</span>
-          </figure>
-          <figure class="gal-item gal-item--placeholder gal-item--terracotta" data-reveal aria-hidden="true">
-            <span>more soon</span>
-          </figure>
-          <figure class="gal-item gal-item--placeholder gal-item--cream" data-reveal aria-hidden="true">
-            <span>more soon</span>
-          </figure>
-        </div>
+      <div class="collage__grid">
+        <figure class="cg cg--w3 cg--h2" data-reveal><img src="images/g-aisle-long.jpg" alt="Long view down a marketplace aisle with track lighting" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-medals.jpg" alt="US Air Force military medals in display cases with handwritten price tags" loading="lazy"></figure>
+        <figure class="cg cg--w2 cg--h1" data-reveal><img src="images/g-coins-detail.jpg" alt="Wooden 'Collectible Coins' sign over a glass case of cataloged pennies and nickels" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h2" data-reveal><img src="images/g-vintage-clothes.jpg" alt="Ted 80 Vintage clothing booth with VeggieTales display" loading="lazy"></figure>
+        <figure class="cg cg--w2 cg--h1" data-reveal><img src="images/g-cash-register.jpg" alt="Antique brass cash register priced at two hundred dollars or best offer" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-spice-jars.jpg" alt="Vintage ceramic spice jars labeled Pepper Cloves Nutmeg with red flower motifs" loading="lazy"></figure>
+        <figure class="cg cg--w2 cg--h2" data-reveal><img src="images/g-aisle-vanish.jpg" alt="Wide marketplace aisle with vanishing-point perspective and clothing rack" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-prada-bags.jpg" alt="Designer Prada handbags in a glass display case" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-bulova-clock.jpg" alt="Vintage Bulova brass nautical clock with Hobson Avenue visible through the window" loading="lazy"></figure>
+        <figure class="cg cg--w2 cg--h1" data-reveal><img src="images/g-pikachu-toys.jpg" alt="Pikachu plush, Hot Wheels, Matchbox cars, and Magic the Gathering cards on a vendor shelf" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h2" data-reveal><img src="images/g-flower-brick.jpg" alt="Painting of pink and red flowers against weathered exposed brick" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-pokemon-card.jpg" alt="Mega Lucario EX Pokémon card priced at eighteen dollars in a display case" loading="lazy"></figure>
+        <figure class="cg cg--w2 cg--h1" data-reveal><img src="images/g-board-games.jpg" alt="Shelves of vintage board games including Scrabble Pictionary Stratego" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-touring-car-art.jpg" alt="Framed clockwork art titled 1910 Touring Car made from gold gears and clock parts" loading="lazy"></figure>
+        <figure class="cg cg--w3 cg--h1" data-reveal><img src="images/g-wood-floor-aisle.jpg" alt="Wide interior view across a wood-floor aisle toward the storefront windows" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-teacup.jpg" alt="Hand-painted patchwork ceramic teacup and saucer" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h2" data-reveal><img src="images/g-eclectic-wide.jpg" alt="Eclectic interior with taxidermy deer head, lamps, and antique clutter" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-pedal-car.jpg" alt="Vintage red pedal car with vintage golf clubs and a Barbicide jar" loading="lazy"></figure>
+        <figure class="cg cg--w2 cg--h1" data-reveal><img src="images/g-handbags-wide.jpg" alt="Glass display cases of handbags surrounded by accessory racks" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-as-is-sign.jpg" alt="Handwritten yellow sign reading All sales are as is, there will be no returns, all sales final" loading="lazy"></figure>
+        <figure class="cg cg--w2 cg--h2" data-reveal><img src="images/g-vases-art.jpg" alt="Antique vases, framed art, and a star-shaped lampshade in a curated booth" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-cross-stitch.jpg" alt="Cross-stitched China linens on a green-painted shelf with a bird print" loading="lazy"></figure>
+        <figure class="cg cg--w1 cg--h1" data-reveal><img src="images/g-kiss-figure.jpg" alt="KISS Ace Frehley collectible action figure in original packaging" loading="lazy"></figure>
+        <figure class="cg cg--w2 cg--h1" data-reveal><img src="images/g-open-sign.jpg" alt="Sandwich-board sign reading Midtown Marketplace OPEN with the line If you can't find it here you probably don't want it" loading="lazy"></figure>
       </div>
     </section>
 
     <!-- HOURS -->
     <section class="hours" aria-labelledby="hours-heading">
-      <div class="container">
-        <h2 id="hours-heading" class="section-title" data-reveal>Hours</h2>
-        <p class="section-kicker" data-reveal>Closed Mondays. Open every other day.</p>
-
+      <div class="container hours__container">
+        <div>
+          <p class="section-kicker" data-reveal>Open six days a week</p>
+          <h2 id="hours-heading" class="section-title" data-reveal>Hours</h2>
+          <p class="hours__note" data-reveal>Closed Mondays. Late Saturday hours till 6 PM.</p>
+        </div>
         <table class="hours-table" id="hoursTable" data-reveal>
           <tbody>
             <tr data-day="0"><th scope="row">Sunday</th><td>12:00 PM – 5:00 PM</td></tr>
@@ -222,10 +284,63 @@
       </div>
     </section>
 
+    <!-- REVIEWS -->
+    <section class="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <p class="section-kicker" data-reveal>Loved by locals</p>
+        <h2 id="reviews-heading" class="section-title" data-reveal>Five stars on Google.</h2>
+
+        <div class="reviews__rating" data-reveal>
+          <div class="reviews__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="reviews__rating-text">5.0 average rating · <a href="https://maps.app.goo.gl/C1WuQxaosrs2DuF1A" target="_blank" rel="noopener">See all reviews on Google →</a></p>
+        </div>
+
+        <ul class="reviews__grid" role="list">
+          <li class="review-card" data-reveal>
+            <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
+            <blockquote class="review-card__quote">
+              <!-- REVIEW PLACEHOLDER 1 — paste from GBP -->
+              Add a review excerpt here.
+            </blockquote>
+            <p class="review-card__author">— Reviewer name</p>
+          </li>
+          <li class="review-card" data-reveal>
+            <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
+            <blockquote class="review-card__quote">
+              <!-- REVIEW PLACEHOLDER 2 -->
+              Add a review excerpt here.
+            </blockquote>
+            <p class="review-card__author">— Reviewer name</p>
+          </li>
+          <li class="review-card" data-reveal>
+            <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
+            <blockquote class="review-card__quote">
+              <!-- REVIEW PLACEHOLDER 3 -->
+              Add a review excerpt here.
+            </blockquote>
+            <p class="review-card__author">— Reviewer name</p>
+          </li>
+          <li class="review-card" data-reveal>
+            <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
+            <blockquote class="review-card__quote">
+              <!-- REVIEW PLACEHOLDER 4 -->
+              Add a review excerpt here.
+            </blockquote>
+            <p class="review-card__author">— Reviewer name</p>
+          </li>
+        </ul>
+
+        <p class="reviews__cta" data-reveal>
+          <a href="https://maps.app.goo.gl/C1WuQxaosrs2DuF1A" target="_blank" rel="noopener" class="btn btn--ghost">Read more on Google Maps</a>
+        </p>
+      </div>
+    </section>
+
     <!-- VISIT -->
     <section class="visit" aria-labelledby="visit-heading">
       <div class="container visit__container">
         <div class="visit__text">
+          <p class="section-kicker" data-reveal>Stop in</p>
           <h2 id="visit-heading" class="section-title" data-reveal>Visit</h2>
           <p class="visit__address" data-reveal>
             800 Hobson Ave<br>
@@ -241,7 +356,7 @@
         <div class="visit__map" data-reveal>
           <iframe
             title="Map showing Midtown Marketplace at 800 Hobson Ave, Hot Springs, AR"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-93.10%2C34.475%2C-93.075%2C34.495&amp;layer=mapnik&amp;marker=34.4869%2C-93.0876"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-93.080%2C34.490%2C-93.056%2C34.506&amp;layer=mapnik&amp;marker=34.4983099%2C-93.0678412"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -252,8 +367,12 @@
     <section class="vendors" aria-labelledby="vendors-heading">
       <div class="container vendors__container" data-reveal>
         <div>
+          <p class="section-kicker section-kicker--inverse">Booths available</p>
           <h2 id="vendors-heading" class="section-title section-title--inverse">Vendors welcome</h2>
-          <p class="vendors__copy">Booth space available. Call to talk it through — no forms, no email back-and-forth.</p>
+          <p class="vendors__copy">
+            12,000 square feet upstairs is open for new vendors. Sizes from 4×10 to 10×10, plus glass showcases.
+            Call the shop to talk it through — no forms, no email back-and-forth.
+          </p>
         </div>
         <a href="tel:+15016559377" class="btn btn--inverse">Call (501) 655-9377</a>
       </div>
@@ -266,21 +385,25 @@
       <div class="site-footer__brand">
         <span class="wordmark__script">Midtown</span>
         <span class="wordmark__sub">Marketplace</span>
+        <p class="site-footer__tag"><em>"If you can't find it here&hellip; you probably don't want it."</em></p>
       </div>
       <div class="site-footer__col">
+        <p class="site-footer__heading">Visit</p>
         <p>800 Hobson Ave<br>Hot Springs, AR 71913</p>
         <p><a href="tel:+15016559377">(501) 655-9377</a></p>
       </div>
       <div class="site-footer__col">
-        <a href="https://www.facebook.com/p/Midtown-MarketPlace-Hot-Springs-Arkansas-61573039200847/" target="_blank" rel="noopener">Facebook</a>
+        <p class="site-footer__heading">Online</p>
+        <p><a href="https://www.facebook.com/p/Midtown-MarketPlace-Hot-Springs-Arkansas-61573039200847/" target="_blank" rel="noopener">Facebook</a></p>
+        <p><a href="https://maps.app.goo.gl/C1WuQxaosrs2DuF1A" target="_blank" rel="noopener">Google Maps</a></p>
       </div>
       <div class="site-footer__col site-footer__col--legal">
         <p>&copy; <span id="year"></span> Midtown Marketplace</p>
+        <p>Hot Springs, Arkansas</p>
       </div>
     </div>
   </footer>
 
-  <!-- GSAP for scroll animations -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="js/main.js" defer></script>
