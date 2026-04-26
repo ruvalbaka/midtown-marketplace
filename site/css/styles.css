@@ -338,7 +338,9 @@ blockquote { margin: 0; }
   flex-direction: column;
   justify-content: flex-end;
   color: white;
-  isolation: isolate;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
   cursor: default;
   transition: transform 0.5s var(--ease);
   box-shadow: var(--shadow-md);
@@ -351,23 +353,25 @@ blockquote { margin: 0; }
   .cat-tile--feature { grid-column: span 1; aspect-ratio: 4 / 5; }
 }
 
+/* Gradient overlay sits above the background image, beneath the content */
 .cat-tile::before {
-  content: ""; position: absolute; inset: 0; z-index: -2;
-  background-image: var(--bg);
-  background-size: cover; background-position: center;
-  transition: transform 0.8s var(--ease);
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.82) 100%);
+  z-index: 1;
+  transition: opacity 0.4s var(--ease);
 }
-.cat-tile:hover::before { transform: scale(1.06); }
-.cat-tile::after {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(0,0,0,0.0) 25%, rgba(0,0,0,0.78) 100%);
-}
+.cat-tile:hover { transform: scale(1.015); box-shadow: var(--shadow-lg); }
+.cat-tile:hover::before { background: linear-gradient(180deg, rgba(0,0,0,0.10) 30%, rgba(0,0,0,0.85) 100%); }
+
+/* Content above the overlay */
+.cat-tile > * { position: relative; z-index: 2; }
 
 .cat-tile__num {
   position: absolute; top: 28px; left: 32px;
   font-family: var(--serif);
   font-size: 22px; font-style: italic;
-  opacity: 0.85;
+  opacity: 0.92;
+  z-index: 2;
 }
 .cat-tile__name {
   font-family: var(--serif);
