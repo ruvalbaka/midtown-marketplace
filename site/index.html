@@ -86,8 +86,40 @@
       "@type": "AggregateRating",
       "ratingValue": "5.0",
       "bestRating": "5",
-      "ratingCount": "1"
-    }
+      "ratingCount": "5"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Cindy S."},
+        "reviewBody": "A really nice store! So much to look at here — vintage and antique goods, unique items, and items for the modern household. I buy something at every visit! And this is a great location. Park once, come in and shop two floors and then visit shops across the street too."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Ezekiel C."},
+        "reviewBody": "A very special flea market. I have a booth here with some friends and my experience with this place and the owners have been top notch. Walking around as a newcomer it is such a friendly place where you will have randomly great interactions. Great variety, layout, and selection among the booths. I don't think most flea markets are the same as this one."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Suzanne M."},
+        "reviewBody": "Such a great place to find treasures. Many cool vintage finds and upscale resale items. If you haven't been here you should add it to your flea market rotation. Lots of new items daily. A great addition to Hot Springs. Two floors of shopping!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Ethan V."},
+        "reviewBody": "Great environment! Great staff! It's a lot bigger inside than it looks — definitely recommend stopping by!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Debbie S."},
+        "reviewBody": "What a gem! Definitely worth a visit if you're in Hot Springs!"
+      }
+    ]
   }
   </script>
 </head>
@@ -296,37 +328,40 @@
         </div>
 
         <ul class="reviews__grid" role="list">
-          <li class="review-card" data-reveal>
+          <li class="review-card review-card--featured" data-reveal>
             <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
             <blockquote class="review-card__quote">
-              <!-- REVIEW PLACEHOLDER 1 — paste from GBP -->
-              Add a review excerpt here.
+              A very special flea market. I have a booth here with some friends and my experience with this place and the owners have been top notch. Walking around as a newcomer it is such a friendly place where you will have randomly great interactions. Great variety, layout, and selection among the booths. I don't think most flea markets are the same as this one. Five stars.
             </blockquote>
-            <p class="review-card__author">— Reviewer name</p>
+            <p class="review-card__author">— Ezekiel C.</p>
           </li>
           <li class="review-card" data-reveal>
             <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
             <blockquote class="review-card__quote">
-              <!-- REVIEW PLACEHOLDER 2 -->
-              Add a review excerpt here.
+              A really nice store! So much to look at here&hellip; vintage and antique goods, unique items, and items for the modern household. I buy something at every visit! Park once, come in and shop two floors and then visit shops across the street too. You can fill some time here!
             </blockquote>
-            <p class="review-card__author">— Reviewer name</p>
+            <p class="review-card__author">— Cindy S.</p>
           </li>
           <li class="review-card" data-reveal>
             <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
             <blockquote class="review-card__quote">
-              <!-- REVIEW PLACEHOLDER 3 -->
-              Add a review excerpt here.
+              Such a great place to find treasures. Many cool vintage finds and upscale resale items. If you haven't been here you should add it to your flea market rotation. Lots of new items daily. A great addition to Hot Springs. Two floors of shopping!
             </blockquote>
-            <p class="review-card__author">— Reviewer name</p>
+            <p class="review-card__author">— Suzanne M.</p>
           </li>
-          <li class="review-card" data-reveal>
+          <li class="review-card review-card--short" data-reveal>
             <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
             <blockquote class="review-card__quote">
-              <!-- REVIEW PLACEHOLDER 4 -->
-              Add a review excerpt here.
+              Great environment!! Great staff!! It's a lot bigger inside than it looks &mdash; definitely recommend stopping by!
             </blockquote>
-            <p class="review-card__author">— Reviewer name</p>
+            <p class="review-card__author">— Ethan V.</p>
+          </li>
+          <li class="review-card review-card--short" data-reveal>
+            <div class="review-card__stars" aria-label="5 stars">★★★★★</div>
+            <blockquote class="review-card__quote">
+              What a gem! Definitely worth a visit if you're in Hot Springs!
+            </blockquote>
+            <p class="review-card__author">— Debbie S.</p>
           </li>
         </ul>
 
