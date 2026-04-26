@@ -338,13 +338,12 @@ blockquote { margin: 0; }
   flex-direction: column;
   justify-content: flex-end;
   color: white;
-  background-image: var(--bg);
-  background-size: cover;
-  background-position: center;
+  background: var(--paper-deep);
   cursor: default;
-  transition: transform 0.5s var(--ease);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
   box-shadow: var(--shadow-md);
 }
+.cat-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .cat-tile--feature { grid-column: span 2; aspect-ratio: 8 / 5; }
 @media (max-width: 880px) {
   .cat-tile--feature { grid-column: span 2; aspect-ratio: 8 / 5; }
@@ -353,18 +352,32 @@ blockquote { margin: 0; }
   .cat-tile--feature { grid-column: span 1; aspect-ratio: 4 / 5; }
 }
 
-/* Gradient overlay sits above the background image, beneath the content */
+/* The actual photo, behind everything */
+.cat-tile__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.8s var(--ease);
+}
+.cat-tile:hover .cat-tile__img { transform: scale(1.06); }
+
+/* Gradient overlay above the photo */
 .cat-tile::before {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.82) 100%);
   z-index: 1;
-  transition: opacity 0.4s var(--ease);
 }
-.cat-tile:hover { transform: scale(1.015); box-shadow: var(--shadow-lg); }
-.cat-tile:hover::before { background: linear-gradient(180deg, rgba(0,0,0,0.10) 30%, rgba(0,0,0,0.85) 100%); }
 
-/* Content above the overlay */
-.cat-tile > * { position: relative; z-index: 2; }
+/* Content above the gradient */
+.cat-tile__num,
+.cat-tile__name,
+.cat-tile__hint {
+  position: relative;
+  z-index: 2;
+}
 
 .cat-tile__num {
   position: absolute; top: 28px; left: 32px;
