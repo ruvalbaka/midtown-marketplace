@@ -23,4 +23,4 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://midtownmarketplacehs.com/sitemap.xml
+Sitemap: https://themidtownmarketplace.com/sitemap.xml
